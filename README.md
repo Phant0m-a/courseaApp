@@ -6,6 +6,15 @@ Coursiya App
 This app covers the UI part of fictional course app built with flutter!
 
 
+## Flutter
+1. `git clone` this repo
+2. `pug get` to get all dependencies
+3. `flutter run` or `flutter run -d chrome` to run the project!
+
+Enjoy ;)
+
+
+
 # Setup 
 
 A few resources to get you started if this is your first Flutter project:
