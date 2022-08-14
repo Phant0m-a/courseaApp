@@ -21,14 +21,52 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: _BuildAppBar(),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [EmojiText(), SearchInput(), FeatureCourse(),ActiveCourse()],
-          ),
-        ));
+      appBar: _BuildAppBar(),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            EmojiText(),
+            SearchInput(),
+            FeatureCourse(),
+            ActiveCourse()
+          ],
+        ),
+      ),
+      bottomNavigationBar: _BuildBottomNavigationBar(),
+    );
+  }
+
+  BottomNavigationBar _BuildBottomNavigationBar() {
+    return BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: kBackground,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(
+              label: 'home',
+              icon: Container(
+                child: Text(
+                  'Home',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                padding: EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                    border:
+                        Border(bottom: BorderSide(color: kAccent, width: 2))),
+              )),
+          BottomNavigationBarItem(
+              label: 'profile-home',
+              icon: Image.asset('assets/icons/profile-home.png', width: 20)),
+          BottomNavigationBarItem(
+              label: 'news',
+              icon: Image.asset('assets/icons/news.png', width: 20)),
+          BottomNavigationBarItem(
+              label: 'study',
+              icon: Image.asset('assets/icons/profile-study.png', width: 20)),
+        ]);
   }
 
   AppBar _BuildAppBar() {

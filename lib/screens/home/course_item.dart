@@ -1,4 +1,5 @@
 import 'package:course_app/constants/colors.dart';
+import 'package:course_app/screens/detail/widget/detail.dart';
 import 'package:flutter/material.dart';
 
 import 'package:course_app/modals/course.dart';
@@ -45,8 +46,7 @@ class CourseItem extends StatelessWidget {
                           children: [
                             Container(
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100)
-                              ),
+                                  borderRadius: BorderRadius.circular(100)),
                               width: 20,
                               height: 20,
                               child: Image.asset(
@@ -109,7 +109,10 @@ class CourseItem extends StatelessWidget {
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => DetailPage(course)));
+              }),
               child: Text('Start'),
             ),
           ),
