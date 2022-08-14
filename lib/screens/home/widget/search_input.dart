@@ -18,7 +18,7 @@ class SearchInput extends StatelessWidget {
                 filled: true,
                 contentPadding: EdgeInsets.all(20),
                 border: InputBorder.none,
-                hintText: 'Search for history, classses,....',
+                hintText: 'Search for history, classes,....',
                 hintStyle: TextStyle(color: kFontLight)),
           ),
         ),
@@ -30,7 +30,7 @@ class SearchInput extends StatelessWidget {
               decoration: BoxDecoration(
                   color: kAccent, borderRadius: BorderRadius.circular(8)),
               child: Image.asset(
-                'assests/icons/search.png',
+                'assets/icons/search.png',
                 width: 20,
               ),
             ))

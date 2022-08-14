@@ -1,6 +1,8 @@
 import 'package:course_app/constants/colors.dart';
 import 'package:course_app/modals/course.dart';
+import 'package:course_app/screens/home/active_course.dart';
 import 'package:course_app/screens/home/course_item.dart';
+import 'package:course_app/screens/home/feature_course.dart';
 import 'package:course_app/screens/home/widget/category_title.dart';
 import 'package:course_app/screens/home/widget/search_input.dart';
 import 'package:flutter/material.dart';
@@ -24,13 +26,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: [
-              EmojiText(),
-              SearchInput(),
-              CategoryTitle('Top of the week', 'view all'),
-              CourseItem( Course('ahsan ali', 'assets/icons/avatar01.png', 'Web Dev ',
-          'assets/images/course01.png'),),
-            ],
+            children: [EmojiText(), SearchInput(), FeatureCourse(),ActiveCourse()],
           ),
         ));
   }

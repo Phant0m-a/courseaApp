@@ -7,12 +7,12 @@ class EmojiText extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 25),
       child: RichText(
-          text: TextSpan(children: [
+          text:const TextSpan(children: [
         TextSpan(
             text: 'Let\s boost your\nbrain power',
             style: TextStyle(
                 fontSize: 25, color: kFont, fontWeight: FontWeight.bold)),
-        TextSpan(text: '✨', style: TextStyle(fontSize: 26))
+        // TextSpan(text:'0', style: TextStyle(fontSize: 26,color: Colors.yellow))
       ])),
     );
   }
